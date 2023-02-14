@@ -6,8 +6,8 @@ mapboxgl.accessToken = 'pk.eyJ1IjoiaXJlbyIsImEiOiJjbGRtMTVrbGkwNHh5M3B0Yjd5YnF3c
 const map = new mapboxgl.Map({
     container: 'ttcmap', // container ID in html
     style: 'mapbox://styles/ireo/cle1oxmx8005c01pflmohg567', // Add link to my stylesheet
-    center: [-79.399, 43.716], // starting position [longitude, latitude]
-    zoom: 11, // starting zoom level
+    center: [-79.389, 43.704], // starting position [longitude, latitude]
+    zoom: 11.3, // starting zoom level
 });
 
 // Add data sources and draw layers
@@ -16,7 +16,7 @@ map.on('load', () => {
     //ADDING TTC subway stations from a GeoJSON file, GeoJSON must direct to URL 
     /*map.addSource('ttc-subwayStns', {
         type: 'geojson',
-        data: 'https://github.com/ireo00/ggr472-lab2/blob/ebafcb999159601fd1720b331c4c65eaae773ddc/Data/subwayStations.geojson'
+        data: 'https://ireo00.github.io/ggr472-lab2/Data/subwayStations.geojson'
     });
 
     //Draw GeoJSON as circles
@@ -123,7 +123,8 @@ map.on('load', () => {
     //ADDING TTC subway stations from a GeoJSON file, GeoJSON must direct to URL 
     map.addSource('to-bakeries', {
         type: 'geojson',
-        data: 'https://github.com/ireo00/ggr472-lab2/blob/17826471d174efba232ad1cf10bac9cc7653c897/Data/TObakeries.geojson'
+        data: 'https://ireo00.github.io/ggr472-lab2/Data/TObakeries.geojson'
+        //'https://github.com/ireo00/ggr472-lab2/blob/17826471d174efba232ad1cf10bac9cc7653c897/Data/TObakeries.geojson'
     });
 
     //Draw GeoJSON as circles
@@ -133,8 +134,21 @@ map.on('load', () => {
         'source': 'to-bakeries',
         'paint': {
             'circle-radius': 5,
-            'circle-color': 'blue'
-        }
+            'circle-color': '#1827AC'
+        }});
+    
+    //Draw GeoJSON labels using 'Name' property
+    map.addLayer({
+        'id': 'toronto-bakeries-labels',
+        'type': 'symbol',
+        'source': 'to-bakeries',
+        'layout': {
+            'text-field': ['get', 'Name'],
+            'text-variable-anchor': ['bottom'],
+            'text-radial-offset': 0.6,
+            'text-justify': 'auto',
+            'text-font': ['DIN Offc Pro Medium'],
+            'text-size': 13
+        }});
 
     });
-});
