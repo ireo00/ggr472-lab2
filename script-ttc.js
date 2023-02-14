@@ -6,8 +6,8 @@ mapboxgl.accessToken = 'pk.eyJ1IjoiaXJlbyIsImEiOiJjbGRtMTVrbGkwNHh5M3B0Yjd5YnF3c
 const map = new mapboxgl.Map({
     container: 'ttcmap', // container ID in html
     style: 'mapbox://styles/ireo/cle1oxmx8005c01pflmohg567', // Add link to my stylesheet
-    center: [-79.349, 43.704], // starting position [longitude, latitude]
-    zoom: 11.2, // starting zoom level
+    center: [-79.399, 43.716], // starting position [longitude, latitude]
+    zoom: 11, // starting zoom level
 });
 
 // Add data sources and draw layers
