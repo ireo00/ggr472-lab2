@@ -239,7 +239,9 @@ map.on('load', () => {
             'text-field': ['get', 'Name'],
             'text-variable-anchor': ['bottom'],
             'text-radial-offset': 0.6,
-            'text-justify': 'auto'
+            'text-justify': 'auto',
+            'text-font': ['DIN Offc Pro Medium'],
+            'text-size': 15
         }
     });
 
