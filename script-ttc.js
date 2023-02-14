@@ -32,7 +32,7 @@ map.on('load', () => {
     });*/
 
     //Add a new source from our vector data for Toronto neighbourhood boundaries via mapbox
-    map.addSource('toronto-nrbd', {
+    /*map.addSource('toronto-nrbd', {
         'type': 'vector',
         'url': 'mapbox://ireo.3lw8ikgt'
     });
@@ -48,7 +48,7 @@ map.on('load', () => {
             'fill-outline-color': '#E3B5B5',
         },
         'source-layer': 'Neighbourhoods-0an01l' //name of layer in mapbox tileset page
-    });
+    });*/
 
     //Add a new source from our vector data for TTC subway lines via mapbox
     map.addSource('ttc-subwaylines', { //Your source ID
