@@ -1,7 +1,7 @@
 # GGR472 Lab 2
  
 This repository contains code for my webpage with a link to a GeoJSON file and two web maps. 
-One map is about Eastern Ontario road trip attractions, and the another is showing TTC subway map in Toronto.
+One map is about Eastern Ontario road trip attractions, and the another is showing TTC subway lines & bakeries in Toronto.
 
 My webpage: https://ireo00.github.io/ggr472-lab2/
 
