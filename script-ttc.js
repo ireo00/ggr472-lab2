@@ -117,4 +117,24 @@ map.on('load', () => {
             'text-size': 15
         }
     });
+
+
+    //Add a new source from our GeoJSON data for TTC subway stations
+    //ADDING TTC subway stations from a GeoJSON file, GeoJSON must direct to URL 
+    map.addSource('to-bakeries', {
+        type: 'geojson',
+        data: 'https://github.com/ireo00/ggr472-lab2/blob/17826471d174efba232ad1cf10bac9cc7653c897/Data/TObakeries.geojson'
+    });
+
+    //Draw GeoJSON as circles
+    map.addLayer({
+        'id': 'bakeries',
+        'type': 'circle',
+        'source': 'to-bakeries',
+        'paint': {
+            'circle-radius': 5,
+            'circle-color': 'blue'
+        }
+
+    });
 });
