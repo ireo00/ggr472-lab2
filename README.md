@@ -7,6 +7,7 @@ My webpage: https://ireo00.github.io/ggr472-lab2/
 
 
 Data Sources:
+I created the Toronto bakeries geoJSON file via geojson.io.
 I used the subway stations data from http://ttcdata.s3-website-us-east-1.amazonaws.com/; 
 the subway lines data from https://open.toronto.ca/dataset/ttc-subway-shapefiles/; 
-and boundaries of Toronto neighbourhoods from https://open.toronto.ca/dataset/neighbourhoods/.
+and boundaries of Toronto neighbourhoods from https://open.toronto.ca/dataset/neighbourhoods/ (ended up not showing this layer).
